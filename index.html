@@ -10,22 +10,36 @@
 
 	.lang.visible {
 		display: inline;
-		// @todo: visibility? font-size? etc?
+		font-size: 15px;
 	}
 </style>
 </head>
 <body>
 	<div id="languages">
 		<label>
-			<input type="radio" name="lang">UA
+			<input type="radio" name="lang" value="ua" checked="true">UA
 		</label>
 		<label>
-			<input type="radio" name="lang">RU
+			<input type="radio" name="lang" value="ru">RU
 		</label>
 		<label>
-			<input type="radio" name="lang">ENG
+			<input type="radio" name="lang" value="eng">ENG
 		</label>
-		<script src="common.js"></script>
 	</div>
+
+	<div id="welcome-message">
+		<span class="lang lang-ua">Привіт</span>
+		<span class="lang lang-ru">Привет</span>
+		<span class="lang lang-eng">Hello</span>
+		, username!
+
+		<span class="lang lang-ua">раді тебе бачити!</span>
+		<span class="lang lang-ru">рады тебя видеть!</span>
+		<span class="lang lang-eng">glad to see you!</span>
+
+	</div>
+
+	<button id="save">Save</button>
+	<script src="common.js"></script>
 </body>
 </html>
