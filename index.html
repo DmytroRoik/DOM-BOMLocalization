@@ -1,45 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>DOM_BOMLocalization</title>
-	<style>
-	.lang {
-		display: none;
-	}
-
-	.lang.visible {
-		display: inline;
-		font-size: 15px;
-	}
-</style>
-</head>
-<body>
-	<div id="languages">
-		<label>
-			<input type="radio" name="lang" value="ua" checked="true">UA
-		</label>
-		<label>
-			<input type="radio" name="lang" value="ru">RU
-		</label>
-		<label>
-			<input type="radio" name="lang" value="eng">ENG
-		</label>
-	</div>
-
-	<div id="welcome-message">
-		<span class="lang lang-ua">Привіт</span>
-		<span class="lang lang-ru">Привет</span>
-		<span class="lang lang-eng">Hello</span>
-		, username!
-
-		<span class="lang lang-ua">раді тебе бачити!</span>
-		<span class="lang lang-ru">рады тебя видеть!</span>
-		<span class="lang lang-eng">glad to see you!</span>
-
-	</div>
-
-	<button id="save">Save</button>
-	<script src="common.js"></script>
-</body>
+<html>
+  <head>
+    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LfhGGkUAAAAAFzf-EapZYPyqU-mxzFmf9uLzDoD'
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div id="html_element"></div>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+  </body>
 </html>
